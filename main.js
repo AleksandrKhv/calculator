@@ -31,7 +31,8 @@ function allButtonOperationClick(eventObject) {
     allOperations(operation)
 }
 
-buttonPlus.addEventListener('click', allButtonOperationClick)
-buttonMinus.addEventListener('click', allButtonOperationClick)
-buttonMultiply.addEventListener('click', allButtonOperationClick)
-buttonDivide.addEventListener('click', allButtonOperationClick)
+let operationButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDivide]
+
+for (let i = 0; i < operationButtons.length; i++) {
+    operationButtons[i].addEventListener('click', allButtonOperationClick)
+}
